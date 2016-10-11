@@ -1,3 +1,5 @@
+
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -65,10 +67,11 @@ public class Acces extends Application {
 		coach.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				root.setCenter(new Coach(stage));
+				root.setCenter(new AccesCoach(stage));
 			}
 		});
 		Button marathoner = new Button();
+		ap.getChildren().add(marathoner);
 		marathoner.setLayoutX(241);
 		marathoner.setLayoutY(170);
 		marathoner.setPrefHeight(113);
@@ -77,7 +80,7 @@ public class Acces extends Application {
 		marathoner.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				root.setCenter(new marathoner(stage));
+				root.setCenter(new AccesMarathoner(stage));
 			}
 		});
 
@@ -86,7 +89,6 @@ public class Acces extends Application {
 		ap.getChildren().add(icpc);
 		ap.getChildren().add(poli);
 		ap.getChildren().add(coach);
-		ap.getChildren().add(marathoner);
 
 		
 		root.setCenter(ap);
