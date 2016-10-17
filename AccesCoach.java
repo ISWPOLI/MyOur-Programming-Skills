@@ -38,7 +38,7 @@ public class AccesCoach extends AnchorPane {
 		userText.setLayoutX(173);
 		userText.setLayoutY(206);
 
-		Text pass = new Text("ContraseÒa");
+		Text pass = new Text("Contrase√±a");
 		this.getChildren().add(pass);
 		pass.setLayoutX(95);
 		pass.setLayoutY(252);
@@ -73,16 +73,16 @@ public class AccesCoach extends AnchorPane {
 					Alert alert = new Alert(AlertType.ERROR);
 					alert.setTitle("Login");
 					alert.setHeaderText(null);
-					alert.setContentText("Usuario / ContraseÒa   Incorrecta");
+					alert.setContentText("Usuario / Contrase√±a   Incorrecta");
 					alert.showAndWait();
 				}
 			}
 		});
 
-		Button volver = new Button("Atr·s");
+		Button volver = new Button("Atr√°s");
 		this.getChildren().add(volver);
 		volver.setLayoutX(275);
-		volver.setLayoutY(280);
+		Volver.setLayoutY(280);
 		volver.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent arg0) {
