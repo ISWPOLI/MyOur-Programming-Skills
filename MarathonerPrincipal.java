@@ -14,7 +14,7 @@ public class MarathonerPrincipal extends Application {
 		BorderPane root = new BorderPaneMarathoner(Stage,new DataHandler(user, pass));
 		Scene s = new Scene(root,500,300,Color.GRAY);
 		Stage.setTitle("Beta Marathoner");
-
+		
 		root.setCenter(new AnchorPaneMarathoner());
 
 		Stage.setResizable(false);
