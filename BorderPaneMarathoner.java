@@ -48,4 +48,3 @@ public class BorderPaneMarathoner extends BorderPane {
 
 	}
 }
-
