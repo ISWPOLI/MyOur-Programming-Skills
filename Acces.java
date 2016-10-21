@@ -55,7 +55,7 @@ public class Acces extends Application {
 			public void handle(ActionEvent event) {
 				try {
 					//en google drive dropbox no se hacen 
-					Desktop.getDesktop().browse(new URI("https://drive.google.com/drive/folders/0BzTC_LIXhClJZkJ4VDV4U2MtV00"));
+					Desktop.getDesktop().browse(new URI("https://drive.google.com/file/d/0BzTC_LIXhClJUHE4MUFUUm52LU0/view?usp=drive_web"));
 				} catch (IOException e) {
 					e.printStackTrace();
 				} catch (URISyntaxException e) {
