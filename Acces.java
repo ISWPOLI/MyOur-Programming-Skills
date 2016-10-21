@@ -1,4 +1,8 @@
-
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -41,6 +45,26 @@ public class Acces extends Application {
 			}
 		});
 
+		Menu ayuda = new Menu("Ayuda");
+		m.getMenus().add(ayuda);
+		MenuItem manual = new MenuItem("Manual");
+		ayuda.getItems().add(manual);
+
+		ayuda.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				try {
+					//en google drive dropbox no se hacen 
+					Desktop.getDesktop().browse(new URI("https://drive.google.com/drive/folders/0BzTC_LIXhClJZkJ4VDV4U2MtV00"));
+				} catch (IOException e) {
+					e.printStackTrace();
+				} catch (URISyntaxException e) {
+					e.printStackTrace();
+				}
+				
+			}
+		});
+
 		AnchorPane ap = new AnchorPane();
 
 		ap.setPrefHeight(400);
@@ -70,6 +94,18 @@ public class Acces extends Application {
 				root.setCenter(new AccesCoach(stage));
 			}
 		});
+		Button general = new Button();
+		general.setLayoutX(168);
+		general.setLayoutY(200);
+		general.setPrefHeight(83);
+		general.setPrefWidth(60);
+		general.setStyle("-fx-background-color: transparent;");
+		general.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				root.setCenter(new AccesGeneral(stage));
+			}
+		});
 		Button marathoner = new Button();
 		ap.getChildren().add(marathoner);
 		marathoner.setLayoutX(241);
@@ -84,11 +120,10 @@ public class Acces extends Application {
 			}
 		});
 
-		
-
 		ap.getChildren().add(icpc);
 		ap.getChildren().add(poli);
 		ap.getChildren().add(coach);
+		ap.getChildren().add(general);
 
 		
 		root.setCenter(ap);

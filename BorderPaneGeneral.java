@@ -12,9 +12,9 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class BorderPaneCoach extends BorderPane {
+public class BorderPaneGeneral extends BorderPane {
 
-	public BorderPaneCoach(Stage stage, DataHandler bd) {
+	public BorderPaneGeneral(Stage stage, DataHandler bd) {
 
 		this.setStyle("-fx-base : GRAY");
 
@@ -47,22 +47,5 @@ public class BorderPaneCoach extends BorderPane {
 				Platform.exit();
 			}
 		});
-
-		Menu agregar = new Menu("Agregar");
-		mb.getMenus().add(agregar);
-		MenuItem agregarMara = new MenuItem("Marathoner");
-		agregar.getItems().add(agregarMara);
-		agregarMara.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent arg0) {
-				//anchor pane de agregar coach
-				try {
-					new AddMarathoner(bd).start(new Stage());
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-
 	}
 }

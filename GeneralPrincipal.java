@@ -1,4 +1,3 @@
-
 import Conection.DataHandler;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -6,16 +5,16 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class MarathonerPrincipal extends Application {
+public class GeneralPrincipal extends Application {
 	
 	public String user,pass;
 	@Override
 	public void start(Stage Stage) throws Exception {
-		BorderPane root = new BorderPaneMarathoner(Stage,new DataHandler(user, pass));
-		Scene s = new Scene(root,500,300,Color.GRAY);
-		Stage.setTitle("Beta Marathoner");
+		BorderPane root = new BorderPaneGeneral(Stage,new DataHandler(user, pass));
+		Scene s = new Scene(root,400,300,Color.GRAY);
+		Stage.setTitle("Beta General");
 
-		root.setCenter(new AnchorPaneMarathoner());
+		root.setCenter(new AnchorPaneGeneral(new DataHandler(user, pass)));
 
 		Stage.setResizable(false);
 		Stage.setScene(s);

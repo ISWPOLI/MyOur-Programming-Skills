@@ -1,31 +1,29 @@
-
-
 import java.sql.SQLException;
 
 import Conection.DataHandler;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class AccesCoach extends AnchorPane {
-	public AccesCoach(Stage stage) {
+public class AccesGeneral extends AnchorPane {
+	public AccesGeneral(Stage stage) {
 
-		stage.setTitle("Beta Coach");
+		stage.setTitle("Beta General");
 
-		ImageView c = new ImageView(new Image("coach.png"));
+		ImageView c = new ImageView(new Image("general.png"));
 		this.getChildren().add(c);
-		c.setFitWidth(178);
-		c.setFitHeight(183);
-		c.setX(111);
+		c.setFitWidth(117);
+		c.setFitHeight(180);
+		c.setX(150);
 		c.setY(14);
 
 		Text user = new Text("Usuario");
@@ -63,7 +61,7 @@ public class AccesCoach extends AnchorPane {
 					if (ok.connect()) {
 						stage.close();
 						try {
-							CoachPrincipal a = new CoachPrincipal();
+							GeneralPrincipal a = new GeneralPrincipal();
 							a.set(u, p);
 							a.start(new Stage());
 						} catch (Exception e) {
