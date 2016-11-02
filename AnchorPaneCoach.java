@@ -8,15 +8,15 @@ import javafx.scene.text.Text;
 
 public class AnchorPaneCoach extends AnchorPane {
 	public AnchorPaneCoach() {
-		Text nombre = new Text("Nombre");
+		Text nombre = new Text("Nombre :");
 		this.getChildren().add(nombre);
 		nombre.setLayoutX(63);
 		nombre.setLayoutY(93);
 
-		Text cc = new Text("C.C :");
-		this.getChildren().add(cc);
-		cc.setLayoutX(63);
-		cc.setLayoutY(135);
+		Text usuario = new Text("Usuario :");
+		this.getChildren().add(usuario);
+		usuario.setLayoutX(63);
+		usuario.setLayoutY(135);
 
 		ImageView foto = new ImageView(new Image("CoachDes.png"));
 		this.getChildren().add(foto);

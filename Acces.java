@@ -1,5 +1,4 @@
 import java.awt.Desktop;
-import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -54,7 +53,6 @@ public class Acces extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 				try {
-					//en google drive dropbox no se hacen 
 					Desktop.getDesktop().browse(new URI("https://drive.google.com/file/d/0BzTC_LIXhClJUHE4MUFUUm52LU0/view?usp=drive_web"));
 				} catch (IOException e) {
 					e.printStackTrace();

@@ -7,7 +7,8 @@ import java.sql.ResultSet;
 
 public class DataHandler {
 
-	public static String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+//	public static String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";     con localhost y con ipv4 la de abajo
+	public static String jdbcUrl = "jdbc:oracle:thin:@192.168.174.129:1521:xe";
 	public static String userid;
 	public static String password;
 	public static Connection conn;
