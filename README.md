@@ -16,7 +16,11 @@ Es un proyecto que busca desarrollar un aplicativo de mejoras para los grupos pe
 ##Cómo usar el proyecto
 
 ##Instrucciones para contribución
+Crear Rama.
+Hacer Commit.
+Discutir y mezclar.
 
 ##Créditos
+Camila Gutierrez, David Yepes, Dario Muñoz, Ivan Barrantes
 
 ##Licencia
