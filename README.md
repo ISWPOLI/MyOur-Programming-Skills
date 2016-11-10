@@ -3,7 +3,11 @@ Aplicativo desarrollado por: David Yepes, Camila Gutiérrez, Dario Muñoz e Ivá
 
 ##Nombre del proyecto
 
+My/Our Programming Skills
+
 ##Descripción
+
+Es un proyecto que busca desarrollar un aplicativo de mejoras para los grupos pertenecientes a las Maratones de Programación.
 
 ##Tabla de contenido
 
