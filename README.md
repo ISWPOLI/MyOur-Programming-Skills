@@ -14,5 +14,6 @@ Aplicativo desarrollado por: David Yepes, Camila Gutiérrez, Dario Muñoz e Ivá
 ##Instrucciones para contribución
 
 ##Créditos
+Camila Gutierrez, David Yepes, Dario Muñoz, Ivan Barrantes
 
 ##Licencia
