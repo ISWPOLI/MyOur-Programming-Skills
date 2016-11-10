@@ -12,6 +12,9 @@ Aplicativo desarrollado por: David Yepes, Camila Gutiérrez, Dario Muñoz e Ivá
 ##Cómo usar el proyecto
 
 ##Instrucciones para contribución
+Crear Rama.
+Hacer Commit.
+Discutir y mezclar.
 
 ##Créditos
 Camila Gutierrez, David Yepes, Dario Muñoz, Ivan Barrantes
