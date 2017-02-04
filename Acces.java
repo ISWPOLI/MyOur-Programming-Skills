@@ -29,11 +29,11 @@ public class Acces extends Application {
 		root.setStyle("-fx-base : GRAY;");
 		Scene scene = new Scene(root,395, 335, Color.BLACK);
 
-		MenuBar m = new MenuBar();
-		m.prefWidthProperty().bind(stage.widthProperty());
-		root.setTop(m);
+		MenuBar bar = new MenuBar();
+		bar.prefWidthProperty().bind(stage.widthProperty());
+		root.setTop(bar);
 		Menu menu = new Menu("Archivo");
-		m.getMenus().add(menu);
+		bar.getMenus().add(menu);
 		MenuItem s = new MenuItem("Salir");
 		menu.getItems().add(s);
 
@@ -45,7 +45,7 @@ public class Acces extends Application {
 		});
 
 		Menu ayuda = new Menu("Ayuda");
-		m.getMenus().add(ayuda);
+		bar.getMenus().add(ayuda);
 		MenuItem manual = new MenuItem("Manual");
 		ayuda.getItems().add(manual);
 
@@ -79,39 +79,38 @@ public class Acces extends Application {
 		icpc.setX(95);
 		icpc.setY(170);
 
-		Button coach = new Button();
-		coach.setLayoutX(95);
-		coach.setLayoutY(232);
-		coach.setPrefHeight(53);
-		coach.setPrefWidth(60);
-		coach.setStyle("-fx-background-color: transparent;");
-//		coach.setBorder();
-		coach.setOnAction(new EventHandler<ActionEvent>() {
+		Button coachB = new Button();
+		coachB.setLayoutX(95);
+		coachB.setLayoutY(232);
+		coachB.setPrefHeight(53);
+		coachB.setPrefWidth(60);
+		coachB.setStyle("-fx-background-color: transparent;");
+		coachB.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				root.setCenter(new AccesCoach(stage));
 			}
 		});
-		Button general = new Button();
-		general.setLayoutX(168);
-		general.setLayoutY(200);
-		general.setPrefHeight(83);
-		general.setPrefWidth(60);
-		general.setStyle("-fx-background-color: transparent;");
-		general.setOnAction(new EventHandler<ActionEvent>() {
+		Button generalB = new Button();
+		generalB.setLayoutX(168);
+		generalB.setLayoutY(200);
+		generalB.setPrefHeight(83);
+		generalB.setPrefWidth(60);
+		generalB.setStyle("-fx-background-color: transparent;");
+		generalB.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				root.setCenter(new AccesGeneral(stage));
 			}
 		});
-		Button marathoner = new Button();
-		ap.getChildren().add(marathoner);
-		marathoner.setLayoutX(241);
-		marathoner.setLayoutY(170);
-		marathoner.setPrefHeight(113);
-		marathoner.setPrefWidth(61);
-		marathoner.setStyle("-fx-background-color: transparent;");
-		marathoner.setOnAction(new EventHandler<ActionEvent>() {
+		Button marathonerB = new Button();
+		ap.getChildren().add(marathonerB);
+		marathonerB.setLayoutX(241);
+		marathonerB.setLayoutY(170);
+		marathonerB.setPrefHeight(113);
+		marathonerB.setPrefWidth(61);
+		marathonerB.setStyle("-fx-background-color: transparent;");
+		marathonerB.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				root.setCenter(new AccesMarathoner(stage));
@@ -120,8 +119,8 @@ public class Acces extends Application {
 
 		ap.getChildren().add(icpc);
 		ap.getChildren().add(poli);
-		ap.getChildren().add(coach);
-		ap.getChildren().add(general);
+		ap.getChildren().add(coachB);
+		ap.getChildren().add(generalB);
 
 		
 		root.setCenter(ap);
